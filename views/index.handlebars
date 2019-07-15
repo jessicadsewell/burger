@@ -1,35 +1,32 @@
-<h1>Eat the burgers!</h1>
+<div class="container">
+  <h1>Eat the burgers!</h1>
+  <img src="/public/assets/images/happierburger.jpg" alt="Happy Burger">
+  <div class="row">
+    <div class="col s6">
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burger/burger-block}}
+      {{/unless}}
+      {{/each}}
+    </div>
 
-<main>
-  <div class="container">
-    <div class="row">
-      <div class="col s6">
-        {{#each burgers}}
-          {{#unless devoured}}
-          {{> burger/burger-block}}
-          {{/unless}}
-        {{/each}}
+    <div class="col s6">
+      {{#each burgers}}
+      {{#if devoured}}
+      <div> {{id}}. {{name}}
+        <div>
+        </div>
       </div>
-
-      <div class="col s6">
-        {{#each burgers}}
-          {{#if devoured}}
-            <div> {{id}}. {{name}}
-              <div>
-              </div>
-            </div>
-          {{/if}}
-        {{/each}}
-      </div>
+      {{/if}}
+      {{/each}}
     </div>
   </div>
-</main>
+  <h2>Add A Burger Option</h2>
 
-<h2>Add A Burger Option</h2>
-
-<form class="create-form">
+  <form class="create-form">
     <div class="form-group">
       <input type="text" id="name" name="burger-name" placeholder="Burger Name">
       <button type="submit" class="addBurgerButton">Add The Burger</button>
     </div>
-</form>
+  </form>
+</div>
