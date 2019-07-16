@@ -1,19 +1,21 @@
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
+body {
+  font-family: 'Germania One', cursive;
+  width: 80%;
+  background-image: url('../images/happierburger.jpg');
+}
+
+#name {
+  background: black;
+  color: white;
+  font-size: x-large;
+}
+
+.addBurgerButton {
+  width: 150px;
+  font-size: large;
+}
+
+#eaten,
+#noteaten {
+  font-size: 22px;
+}
